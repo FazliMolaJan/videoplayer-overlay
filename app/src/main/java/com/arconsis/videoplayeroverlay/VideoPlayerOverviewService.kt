@@ -29,13 +29,13 @@ class VideoPlayerOverviewService : Service(), MediaPlayer.OnPreparedListener, Su
         super.onCreate()
         windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
 
-        var params: WindowManager.LayoutParams = WindowManager.LayoutParams(
+        val params: WindowManager.LayoutParams = WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.TYPE_PHONE,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT)
-        params.gravity = Gravity.TOP or Gravity.LEFT
+        params.gravity = Gravity.TOP or Gravity.START
         params.x = 20
         params.y = 200
 
